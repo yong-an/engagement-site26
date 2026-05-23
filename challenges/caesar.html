@@ -75,7 +75,7 @@
   .code-reveal p{font-size:0.75rem;color:#ffffff;margin-top:0.75rem;}
 
   /* ══════════════════════════════════════════════
-     MOBILE OPTIMISATION — applied globally
+     MOBILE OPTIMISATION  applied globally
   ══════════════════════════════════════════════ */
   html { -webkit-text-size-adjust: 100%; }
 
@@ -89,7 +89,7 @@
   @media (max-width: 600px) {
     body { font-size: 14px; }
 
-    /* Scanlines off on small screens — saves GPU */
+    /* Scanlines off on small screens  saves GPU */
     body::before { display: none; }
 
     /* Bigger tap targets for all buttons */
@@ -223,7 +223,7 @@
 <body>
 <a href="../index.html" class="back-link">← RETURN TO HQ</a>
 <header>
-  <div class="node-label">// NODE 03 — CHALLENGE</div>
+  <div class="node-label">// NODE 03  CHALLENGE</div>
   <div class="title">CAESAR CIPHER</div>
   <div class="subtitle">Intercept. Decode. Extract the password.</div>
 </header>
@@ -236,7 +236,7 @@
 
   <details>
     <summary>NOTE: WHAT IS A CAESAR CIPHER?</summary>
-    <p>Each letter is shifted by a fixed number. With shift=3: A→D, B→E, Z→C. To decode, shift the other way. There are only <strong>25 possible shifts</strong> — try them all until you read English.</p>
+    <p>Each letter is shifted by a fixed number. With shift=3: A→D, B→E, Z→C. To decode, shift the other way. There are only <strong>25 possible shifts</strong> try them all until you read English.</p>
   </details>
   <details>
     <summary>NOTE: WHAT SHIFT TO TRY?</summary>
@@ -269,7 +269,7 @@
   </div>
 
   <div class="panel">
-    <div class="panel-label">// ANSWER — WHAT IS THE SECRET PASSWORD?</div>
+    <div class="panel-label">// ANSWER - WHAT IS THE SECRET PASSWORD?</div>
     <div class="answer-section">
       <div class="ans-label">Enter the secret password found in the decoded message:</div>
       <div class="answer-row">
@@ -283,7 +283,7 @@
   <div class="code-reveal" id="code-reveal">
     <div class="label">// TRANSMISSION DECODED</div>
     <div class="secret" id="secret-display">........</div>
-    <p>Caesar ciphers are trivially broken by brute force — only 25 possible keys. Modern encryption uses <strong>AES, RSA, and ECC</strong> with astronomically larger key spaces. Enter this code at HQ to stamp your passport.</p>
+    <p>Caesar ciphers are trivially broken by brute force, only 25 possible keys. Modern encryption uses <strong>AES, RSA, and ECC</strong> with astronomically larger key spaces. Enter this code at HQ to stamp your passport.</p>
   </div>
 </main>
 
@@ -363,12 +363,12 @@ async function checkAnswer() {
       fb.className='feedback error'; return;
     }
     _decodedCorrectly = true;
-    fb.textContent = '> CORRECT — PASSWORD VERIFIED.'; fb.className='feedback success';
+    fb.textContent = '> CORRECT! PASSWORD VERIFIED.'; fb.className='feedback success';
     document.getElementById('code-reveal').classList.add('show');
     _scrollToReveal();
     document.getElementById('secret-display').textContent = await _assembleCaesar();
   } else {
-    fb.textContent = '> INCORRECT — Check your decoded message again.'; fb.className='feedback error';
+    fb.textContent = '> INCORRECT! Check your decoded message again.'; fb.className='feedback error';
   }
 }
 
